@@ -1,0 +1,31 @@
+{
+	"name": "ilyamedve.dev",
+	"version": "0.0.1",
+	"description": "my personal website",
+	"scripts": {
+		"start": "parcel src/index.pug",
+		"build": "parcel build src/index.pug --dist-dir public"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Terro216/ilyamedve.dev.git"
+	},
+	"keywords": [
+		"portfolio"
+	],
+	"author": "ilyamed",
+	"license": "UNLICENSED",
+	"bugs": {
+		"url": "https://github.com/Terro216/ilyamedve.dev/issues"
+	},
+	"homepage": "https://github.com/Terro216/ilyamedve.dev#readme",
+	"devDependencies": {
+		"@parcel/transformer-pug": "^2.8.0",
+		"@parcel/transformer-sass": "^2.8.0",
+		"parcel": "^2.8.0"
+	},
+	"dependencies": {
+		"dotenv": "^16.0.3",
+		"firebase": "^9.14.0"
+	}
+}
