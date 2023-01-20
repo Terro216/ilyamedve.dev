@@ -1,12 +1,27 @@
 html 
     head 
-        title= "hello"
+        title= "p"
         link(rel='stylesheet', href='styles.scss')
         style. 
             @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap');
+        script(src="https://kit.fontawesome.com/f5c02b8de6.js", crossorigin="anonymous")
+        script(src="circle.js")
 
     body 
-        h1 
-            | ilya medve
-            p .
-            | dev
+        header
+            h1 
+                | ilya medve
+                span(class="dot") .
+                | dev
+            .circle ice-cream | Student | Frontend-developer | React | 
+            .social 
+                a(href='https://vk.com/ilya_med', target='_blank')
+                    i(class='fab fa-vk fa-2x')
+                a(href='https://t.me/Terroo', target='_blank')
+                    i(class='fab fa-telegram fa-2x')
+                a(href='https://github.com/Terro216', target='_blank')
+                    i(class='fab fa-github fa-2x')
+                a(href='https://www.instagram.com/ilyamed216/', target='_blank')
+                    i(class='fab fa-instagram fa-2x')
+        main
+            .projects 

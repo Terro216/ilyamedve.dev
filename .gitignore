@@ -2,6 +2,7 @@
 .parcel-cache
 .firebaserc
 .firebase
+dist/
 
 # Logs
 logs
