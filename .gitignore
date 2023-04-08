@@ -3,6 +3,7 @@
 .firebaserc
 .firebase
 dist/
+public/
 
 # Logs
 logs

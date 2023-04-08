@@ -32,7 +32,6 @@ header {
 	.circle {
 		position: relative;
 		left: 1%;
-		bottom: 5%;
 		--radius: 300px; //20vmax;
 		font-size: 1em;
 		@media screen and (max-width: $mobile) {

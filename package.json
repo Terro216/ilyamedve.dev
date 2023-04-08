@@ -4,15 +4,14 @@
 	"description": "my personal website",
 	"scripts": {
 		"start": "parcel src/index.pug",
-		"build": "parcel build src/index.pug --dist-dir public"
+		"build": "parcel build src/index.pug --dist-dir public",
+		"predeploy": "npm run build",
+		"deploy": "firebase deploy"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/Terro216/ilyamedve.dev.git"
 	},
-	"keywords": [
-		"portfolio"
-	],
 	"author": "ilyamed",
 	"license": "UNLICENSED",
 	"bugs": {
@@ -22,10 +21,11 @@
 	"devDependencies": {
 		"@parcel/transformer-pug": "^2.8.0",
 		"@parcel/transformer-sass": "^2.8.0",
-		"parcel": "^2.8.0"
+		"dotenv": "^16.0.3",
+		"parcel": "^2.8.0",
+		"parcel-reporter-static-files-copy": "^1.5.0"
 	},
 	"dependencies": {
-		"dotenv": "^16.0.3",
 		"firebase": "^9.14.0",
 		"normalize.css": "^8.0.1"
 	}
