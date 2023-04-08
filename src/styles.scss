@@ -9,6 +9,7 @@ body {
 
 header {
 	height: calc(100vh - 32px - 5%); //full page - iconSize - socialMargin
+	height: calc(100lvh - 32px - 5%); //full page - iconSize - socialMargin
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -16,9 +17,9 @@ header {
 	font-family: 'Noto Sans Mono', monospace;
 	font-size: 1em;
 	@media screen and (max-width: $mobile) {
-		font-size: 7em;
+		font-size: 1.5em;
 	}
-	h1 {
+	h1.me {
 		letter-spacing: 0.2em;
 		color: rgb(141, 141, 141);
 		.dot {
@@ -28,14 +29,17 @@ header {
 			text-shadow: 1px 1px 10px white, -1px 1px 10px blue, 1px -1px 10px blue, -1px -1px 10px white;
 		}
 	}
-	@mixin letters($radius, $ltr-value, $rtl-value) {
-	}
 	.circle {
 		position: relative;
-		margin-left: 5%;
-		$font-size: 1em;
-		$radius: 20vmax;
-		font-size: $font-size;
+		left: 1%;
+		bottom: 5%;
+		--radius: 300px; //20vmax;
+		font-size: 1em;
+		@media screen and (max-width: $mobile) {
+			font-size: 0.6em;
+			bottom: -18%;
+			left: 8%;
+		}
 		//left: calc(50% + (7 * 1em));
 		// width: 10px;
 		// height: 10px;
@@ -51,26 +55,26 @@ header {
 				position: absolute;
 				@if $deg < 90deg {
 					//I
-					bottom: math.sin($deg) * $radius;
-					left: math.cos($deg) * $radius;
+					bottom: calc(math.sin($deg) * var(--radius));
+					left: calc(math.cos($deg) * var(--radius));
 					transform: rotate(calc(90deg - $deg));
 				} @else if $deg >= 90deg and $deg < 180deg {
 					$deg: 180deg - $deg;
 					//II
-					bottom: math.sin($deg) * $radius;
-					left: math.cos($deg) * $radius * -1;
+					bottom: calc(math.sin($deg) * var(--radius));
+					left: calc(math.cos($deg) * var(--radius) * -1);
 					transform: rotate(calc($deg - 90deg));
 				} @else if $deg >= 180deg and $deg < 270deg {
 					// III
 					$deg: $deg - 180deg;
-					bottom: math.sin($deg) * $radius * -1;
-					left: math.cos($deg) * $radius * -1;
+					bottom: calc(math.sin($deg) * var(--radius) * -1);
+					left: calc(math.cos($deg) * var(--radius) * -1);
 					transform: rotate(calc(270deg - $deg));
 				} @else if $deg >= 270deg {
 					/// IV
 					$deg: 360deg - $deg;
-					bottom: math.sin($deg) * $radius * -1;
-					left: math.cos($deg) * $radius;
+					bottom: calc(math.sin($deg) * var(--radius) * -1);
+					left: calc(math.cos($deg) * var(--radius));
 					transform: rotate(calc($deg - 270deg));
 				}
 			}
