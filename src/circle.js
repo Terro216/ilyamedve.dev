@@ -16,7 +16,7 @@ function lettering() {
 	})
 
 	let mewidth = document.querySelector('.me').offsetWidth
-	if (window.innerWidth <= 768) mewidth -= 320
+	if (window.innerWidth <= 768) mewidth -= 240
 	else mewidth -= 50
 	console.log(mewidth)
 	document.querySelector('.circle').style.setProperty('--radius', mewidth + 'px')
