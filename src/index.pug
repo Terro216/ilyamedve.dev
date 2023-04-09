@@ -1,4 +1,5 @@
-html 
+doctype html
+html(lang="ru")
     head 
         title= "i"
         include blocks/seo.pug
@@ -9,20 +10,20 @@ html
         script(src="circle.js")
 
     body 
-        header
+        header(lang="en")
             h1.me
                 | ilya medve
                 span(class="dot") .
                 | dev
             .circle ice-cream | Student | Frontend-developer | React | 
             .social 
-                a(href='https://vk.com/ilya_med', target='_blank')
+                a(href='https://vk.com/ilya_med' target='_blank' aria-label="VK")
                     i(class='fab fa-vk fa-2x')
-                a(href='https://t.me/Terroo', target='_blank')
+                a(href='https://t.me/Terroo' target='_blank' aria-label="Telegram")
                     i(class='fab fa-telegram fa-2x')
-                a(href='https://github.com/Terro216', target='_blank')
+                a(href='https://github.com/Terro216' target='_blank' aria-label="Github")
                     i(class='fab fa-github fa-2x')
-                a(href='https://www.instagram.com/ilyamed216/', target='_blank')
+                a(href='https://www.instagram.com/ilyamed216/' target='_blank' aria-label="Instagram")
                     i(class='fab fa-instagram fa-2x')
         main
             .projects 
