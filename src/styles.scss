@@ -8,8 +8,8 @@ body {
 }
 
 header {
-	height: calc(100vh - 32px - 5%); //full page - iconSize - socialMargin
-	height: calc(100lvh - 32px - 5%); //full page - iconSize - socialMargin
+	height: 100vh; // - 32px - 5% = full page - iconSize - socialMargin
+	height: 100lvh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -23,6 +23,7 @@ header {
 	h1.me {
 		letter-spacing: 0.2em;
 		color: rgb(141, 141, 141);
+		margin-bottom: 5%;
 		.dot {
 			color: white;
 			padding: 0 10px;
@@ -33,11 +34,12 @@ header {
 	.circle {
 		position: relative;
 		left: 1%;
+		bottom: 10%;
 		--radius: 300px; //20vmax;
 		font-size: 1em;
 		@media screen and (max-width: $mobile) {
 			font-size: 0.6em;
-			bottom: 8%;
+			bottom: 12%;
 			left: 8%;
 		}
 		//left: calc(50% + (7 * 1em));
