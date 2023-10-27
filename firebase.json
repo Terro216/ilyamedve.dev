@@ -5,6 +5,11 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ]
+    ],
+    "redirects": [ {
+      "source": "/happy-birthday/alice-sakva-2023",
+      "destination": "happy-birthday-alice-2023.vercel.app",
+      "type": 301
+    } ],
   }
 }
