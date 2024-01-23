@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Noto Sans
+- Font Author: Copyright 2022 The Noto Project Authors (https://github.com/notofonts/latin-greek-cyrillic)
+- Font Source: http://fonts.gstatic.com/s/notosans/v35/o-0mIpQlx3QUlC5A4PNB6Ryti20_6n1iPHjcz6L1SoM-jCpoiyD9A99d41P6zHtY.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

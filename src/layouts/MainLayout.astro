@@ -1,0 +1,29 @@
+---
+import SEO from '../components/SEO.astro'
+
+interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<!doctype html>
+<html lang='ru'>
+  <head>
+    <title>i</title>
+    <SEO />
+    <script src='https://kit.fontawesome.com/f5c02b8de6.js' crossorigin='anonymous'></script>
+  </head>
+
+  <body>
+    <slot />
+    <style lang='scss'>
+      body {
+        margin: 0;
+        background: rgb(27, 24, 29);
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

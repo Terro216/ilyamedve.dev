@@ -1,32 +1,29 @@
 {
-	"name": "ilyamedve.dev",
-	"version": "0.0.1",
-	"description": "my personal website",
-	"scripts": {
-		"start": "parcel src/index.pug",
-		"build": "parcel build src/index.pug --dist-dir public",
-		"predeploy": "npm run build",
-		"deploy": "firebase deploy"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/Terro216/ilyamedve.dev.git"
-	},
-	"author": "ilyamed",
-	"license": "UNLICENSED",
-	"bugs": {
-		"url": "https://github.com/Terro216/ilyamedve.dev/issues"
-	},
-	"homepage": "https://github.com/Terro216/ilyamedve.dev#readme",
-	"devDependencies": {
-		"@parcel/transformer-pug": "^2.8.0",
-		"@parcel/transformer-sass": "^2.8.0",
-		"dotenv": "^16.0.3",
-		"parcel": "^2.8.0",
-		"parcel-reporter-static-files-copy": "^1.5.0"
-	},
-	"dependencies": {
-		"firebase": "^9.14.0",
-		"normalize.css": "^8.0.1"
-	}
+  "name": "ilyamedve.dev",
+  "version": "0.1.0",
+  "description": "my personal website",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Terro216/ilyamedve.dev.git"
+  },
+  "author": "ilyamed",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Terro216/ilyamedve.dev/issues"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^2.0.3",
+    "@astrojs/sitemap": "^3.0.4",
+    "@fontsource-variable/noto-sans-mono": "^5.0.18",
+    "astro": "^4.0.9",
+    "sass": "^1.69.7"
+  }
 }
