@@ -1,0 +1,78 @@
+---
+import cinemaCover from '../assets/images/projects/cinema.webp'
+import mysiteCover from '../assets/images/projects/mysite.webp'
+import voiceshopCover from '../assets/images/projects/voiceshop.webp'
+import imageuploaderCover from '../assets/images/projects/imageuploader.webp'
+
+interface Props {
+  type: 'cinema' | 'mysite' | 'voiceshop' | 'imageuploader'
+  // align: 'center' | 'left' | 'right'
+}
+
+const { type } = Astro.props
+
+const projects = {
+  cinema: {
+    imageSource: cinemaCover,
+    title: 'Онлайн кинотеатр (2022)',
+    description:
+      'Один из первых пет-проджектов.. Возможно, слишком много анимаций, но главное функционал рабочий (p.s. чтобы посмотреть фильм обновите страницу, после чего появится кнопка открытия плеера)',
+    link: 'https://terro216.github.io/cinema-react/#/top/TOP_250_BEST_FILMS',
+    github: 'https://github.com/Terro216/cinema-react',
+  },
+  mysite: {
+    imageSource: mysiteCover,
+    title: 'Мой прошлый сайт-портфолио (2020)',
+    description:
+      'Хороший сайт. Даже в чем-то лучше этого. И еще там больше проектов и есть мой стек технологий. И при наведении на карточки проектов классные анимации со spring js. Рекомендую зайти',
+    link: 'https://terro216.github.io/my_portfolio/',
+    github: 'https://github.com/Terro216/my_portfolio/',
+  },
+  voiceshop: {
+    imageSource: voiceshopCover,
+    title: 'Список продуктов в магазин (2021)',
+    description:
+      'Основная задумка - на сайте можно составить список продуктов в магазин а потом отправить его кому-то (и он сможет вычеркивать купленные продукты). Главная фишка - присутствует голосовой ввод с парочкой команд. Может когда-нибудь перепишу его и доведу до ума',
+    link: 'https://terro216.github.io/voice_shopping_list/',
+    github: 'https://github.com/Terro216/voice_shopping_list',
+  },
+  imageuploader: {
+    imageSource: imageuploaderCover,
+    title: 'Поделиться изображением (2021)',
+    description:
+      'На сайте можно загрузить изображение.. и получить на него ссылку, чтобы кому-то отправить. (p.s. изображения не шифруются, так что я вижу все что вы загружаете)',
+    link: 'https://image-uploader-111.web.app/',
+    github: 'https://github.com/Terro216/image-uploader',
+  },
+}
+
+const currentProject = projects[type]
+---
+
+<article>
+  <img src={currentProject.imageSource.src} alt='Скриншот проекта' />
+  <h3>{currentProject.title}</h3>
+  <p>{currentProject.description}</p>
+  <div>
+    <a href={currentProject.link} target='_blank'>Сайт</a>
+    •
+    <a href={currentProject.github} target='_blank'>Github</a>
+  </div>
+</article>
+
+<style lang='scss'>
+  //define:vars={{ align }}
+  article {
+    max-width: 85%;
+    display: flex;
+    flex-direction: column;
+    img {
+      // width: 100%;
+      // height: 430px;
+      max-width: 100%;
+      max-height: 40vh;
+      object-fit: cover;
+      align-self: center;
+    }
+  }
+</style>

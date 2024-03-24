@@ -1,5 +1,6 @@
 ---
 import SEO from '../components/SEO.astro'
+import '@fontsource-variable/montserrat'
 
 interface Props {
   title: string
@@ -9,20 +10,27 @@ const { title } = Astro.props
 ---
 
 <!doctype html>
-<html lang='ru'>
+<html lang='ru' 🦎>
   <head>
     <title>i</title>
     <SEO />
-    <script src='https://kit.fontawesome.com/f5c02b8de6.js' crossorigin='anonymous'></script>
   </head>
 
   <body>
     <slot />
-    <style lang='scss'>
+    <style lang='scss' is:global>
+      @use '../assets/styles/_variables.scss' as *;
+
       body {
         margin: 0;
         background: rgb(27, 24, 29);
-        text-align: center;
+        font-family: $base-font;
+        color: $text-white;
+        padding: 0 3%;
+      }
+
+      a {
+        color: inherit;
       }
     </style>
   </body>

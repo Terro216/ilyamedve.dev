@@ -1,0 +1,47 @@
+---
+import Circle from '../components/Circle.astro'
+import SocialLine from '../components/SocialLine.astro'
+// Supports weights 100-900
+import '@fontsource-variable/noto-sans-mono'
+---
+
+<section id='hero'>
+  <h1 class='me'>ilya medve<span class='dot'>.</span>dev</h1>
+  <Circle />
+  <SocialLine />
+</section>
+
+<style lang='scss'>
+  @use '../assets/styles/_variables.scss' as *;
+
+  section {
+    height: 100vh; // - 32px - 5% = full page - iconSize - socialMargin
+    height: 100lvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Noto Sans Mono Variable', sans-serif;
+    font-size: 1em;
+    @media screen and (max-width: $mobile) {
+      justify-content: space-around;
+      font-size: 1.2em;
+    }
+    h1.me {
+      position: absolute;
+      bottom: calc(50%);
+      letter-spacing: 0.2em;
+      color: rgb(141, 141, 141);
+      .dot {
+        color: white;
+        padding: 0 10px;
+        text-align: center;
+        text-shadow:
+          1px 1px 10px white,
+          -1px 1px 10px blue,
+          1px -1px 10px blue,
+          -1px -1px 10px white;
+      }
+    }
+  }
+</style>

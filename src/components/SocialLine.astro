@@ -1,0 +1,50 @@
+---
+import VK_Logo from '../../public/images/social_icons/vk.svg'
+import TG_Logo from '../../public/images/social_icons/tg.svg'
+import Github_Logo from '../../public/images/social_icons/github.svg'
+import Inst_Logo from '../../public/images/social_icons/insta.svg'
+import LinkedIn_Logo from '../../public/images/social_icons/linkedin.svg'
+import { Image } from 'astro:assets'
+---
+
+<div class='social'>
+  <a href='https://vk.com/ilya_med' target='_blank' aria-label='VK'>
+    <Image src={VK_Logo} alt='VK logo' width={40} />
+  </a>
+  <a href='https://t.me/Terroo' target='_blank' aria-label='Telegram'>
+    <Image src={TG_Logo} alt='Telegram logo' width={40} />
+  </a>
+  <a href='https://github.com/Terro216' target='_blank' aria-label='Github'>
+    <Image src={Github_Logo} alt='Github logo' width={40} />
+  </a>
+  <a href='https://www.instagram.com/ilyamed216/' target='_blank' aria-label='Instagram'>
+    <Image src={Inst_Logo} alt='Instagram logo' width={40} />
+  </a>
+  <a href='https://t.me/Terroo' target='_blank' aria-label='LinkedIn'>
+    <Image src={LinkedIn_Logo} alt='LinkedIn logo' width={40} />
+  </a>
+</div>
+
+<style lang='scss'>
+  .social {
+    position: absolute;
+    bottom: calc(5% - 10px);
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    color: rgb(168, 168, 168);
+    a {
+      filter: brightness(0.8);
+      padding: 10px;
+      &:visited {
+        color: inherit;
+      }
+      &:hover {
+        filter: brightness(1);
+      }
+      img {
+        filter: invert(0.9);
+      }
+    }
+  }
+</style>

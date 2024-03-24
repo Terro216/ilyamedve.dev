@@ -1,5 +1,3 @@
-import { mobileBreakPoint } from '../assets/styles/exports.module.scss'
-
 function lettering() {
   const circle = document.querySelector('.circle')
   if (!circle) return
@@ -16,13 +14,13 @@ function lettering() {
     circle.append(span)
   })
 
-  let mewidth = document.querySelector('.me')?.offsetWidth
-  if (!mewidth) return
-  if (window.innerWidth <= mobileBreakPoint) mewidth = Math.floor(mewidth * 0.4)
-  else mewidth -= 50
+  // let mewidth = document.querySelector('.me')?.offsetWidth
+  // if (!mewidth) return
+  // if (window.innerWidth <= mobileBreakPoint) mewidth = Math.floor(mewidth * 0.4)
+  // else mewidth -= 50
 
-  const radius = Math.min(Math.floor(window.innerWidth / 2), Math.floor(window.innerHeight / 2), mewidth)
-  document.querySelector('.circle')?.style.setProperty('--radius', radius + 'px') // mewidth + 'px')
+  // const radius = Math.min(Math.floor(window.innerWidth / 2), Math.floor(window.innerHeight / 2))
+  // document.querySelector('.circle')?.style.setProperty('--radius', radius + 'px')
 
   animateCircle()
 }

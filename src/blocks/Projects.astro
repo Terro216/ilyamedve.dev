@@ -1,0 +1,28 @@
+---
+import ProjectItem from '../components/ProjectItem.astro'
+---
+
+<section id='projects'>
+  <h2>Мои проекты. Топ-4</h2>
+  <div class='wrapper'>
+    <ProjectItem type='cinema' />
+    <ProjectItem type='mysite' />
+    <ProjectItem type='voiceshop' />
+    <ProjectItem type='imageuploader' />
+  </div>
+</section>
+
+<style lang='scss'>
+  h2 {
+    font-style: italic;
+    font-size: 2em;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: baseline;
+    justify-items: center;
+    gap: 3%;
+  }
+</style>

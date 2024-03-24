@@ -1,0 +1,61 @@
+<div class='circle'>ice-cream | Student | Frontend-developer | React |</div>
+
+<script src='../scripts/circle.ts'></script>
+
+<style lang='scss'>
+  @use '../assets/styles/_variables.scss' as *;
+
+  .circle {
+    --radius: 15vw; //500px;
+    position: absolute;
+    top: calc(50% - 32px);
+    font-size: 1.1em;
+    transform: rotate(90);
+    user-select: none;
+    color: $text-white;
+    @media screen and (max-width: $mobile) {
+      font-size: 0.9em;
+      //   top: calc(25%);
+      // z-index: -1;
+      display: none;
+    }
+  }
+</style>
+
+<style lang='scss' is:global>
+  @use 'sass:math';
+
+  $lettersCount: 51;
+  $sector: calc(360deg / $lettersCount);
+  @for $i from 0 through $lettersCount {
+    $deg: $i * $sector;
+    .letter-#{$i} {
+      // margin-left: calc(-1 * 0rem);
+      position: absolute;
+      @if $deg < 90deg {
+        //I
+        bottom: calc(math.sin($deg) * var(--radius));
+        left: calc(math.cos($deg) * var(--radius));
+        transform: rotate(calc(90deg - $deg));
+      } @else if $deg >= 90deg and $deg < 180deg {
+        $deg: 180deg - $deg;
+        //II
+        bottom: calc(math.sin($deg) * var(--radius));
+        left: calc(math.cos($deg) * var(--radius) * -1);
+        transform: rotate(calc($deg - 90deg));
+      } @else if $deg >= 180deg and $deg < 270deg {
+        // III
+        $deg: $deg - 180deg;
+        bottom: calc(math.sin($deg) * var(--radius) * -1);
+        left: calc(math.cos($deg) * var(--radius) * -1);
+        transform: rotate(calc(270deg - $deg));
+      } @else if $deg >= 270deg {
+        /// IV
+        $deg: 360deg - $deg;
+        bottom: calc(math.sin($deg) * var(--radius) * -1);
+        left: calc(math.cos($deg) * var(--radius));
+        transform: rotate(calc($deg - 270deg));
+      }
+    }
+  }
+</style>
