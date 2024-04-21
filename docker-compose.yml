@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ilyamedve.dev
+    container_name: ilyamedve.dev
+    restart: always
+    ports:
+      - '8080:8080'
